@@ -1,0 +1,38 @@
+{
+  "name": "tripfinder",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/react-bootstrap": "^0.32.6",
+    "@types/react-bootstrap-typeahead": "^2.3.0",
+    "@types/react-redux": "^5.0.15",
+    "@types/react-router": "^4.0.22",
+    "@types/react-router-dom": "^4.2.4",
+    "@types/redux-promise": "^0.5.28",
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-typeahead": "^2.5.1",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts-ts": "2.13.0",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.0",
+    "@types/node": "^9.4.6",
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "typescript": "^2.7.2"
+  }
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "algorithmName":"Dijkstra's",
+        "isCurrent":true
+    },
+    {
+        "algorithmName":"Bellman Ford",
+        "isCurrent":false
+    }
+]   

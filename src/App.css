@@ -1,0 +1,331 @@
+.main-container {
+ 
+
+
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+                     rgba(20, 20, 20, 0.3), 
+                     rgba(20,20,20, .8  )),
+                     url("./images/worldmap.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  
+ 
+  
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.input100 {
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-family: SourceSansPro-Bold;
+  font-size: 16px;
+  color: #4b2354;
+  line-height: 1.2;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+p {
+  color: #999;
+}
+
+strong {
+  color: #333;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.page-head-image {
+  
+}
+
+.page-head-image img {
+  border-radius: 50%;
+}
+
+#form-trabalhe {
+  margin-top: 30px;
+  text-align: left;
+}
+
+label {
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+input {
+  border: 2px solid #CCC !important;
+  height: 35px;
+  border-radius: 3px;
+  max-width: 100%;
+}
+
+.input-group-addon {
+  border: 2px solid #CCC !important;
+  border-right: 0px !important;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.travel-box {
+
+
+  width:300px;
+  border-radius: 10%;
+  margin-top:10px;
+  margin-left: 20px;
+ 
+  
+
+}
+
+.place{
+  color:darkcyan;
+  text-transform: uppercase;
+   font-size: 1.2em;
+}
+
+.vert{
+  border-left: 3px solid darkcyan;
+    height: 7px;
+    margin-left: 10px;
+  
+}
+
+.customTypeAhead{
+  border:0;
+}
+input {
+  border:0px !important;
+}
+
+.wrap-contact100 {
+  width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 150px 25px 150px;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  
+}
+
+@media (max-width: 768px) {
+  .wrap-contact100 {
+    padding: 72px 50px 25px 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap-contact100 {
+    padding: 72px 15px 25px 15px;
+  }
+}
+
+.Errorform{
+  color:Red;
+  font-weight: bold;
+}
+
+.topFormBar{
+ 
+
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 150px 25px 150px;
+
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  background-color: navy;
+  width: 58%;
+  position: relative;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+height: 5px !important;
+color:white;
+font-weight: bold;
+}
+
+.btnBack{
+  margin-top: 70px;
+}
+
+span {
+  color:rgb(13, 105, 158);
+
+}
+
+.Infomsg{
+  width: 95%;
+ border: 1px cyan solid;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+ margin-top: 10px;
+  overflow: hidden;
+  text-align: left;
+ 
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+  
+
+}
+.vehicle {
+  text-transform: uppercase;
+}
+
+.TripFormText{
+  font-size:2vw;
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+  color: rgba(8, 81, 122, 0.972)
+}
+
+
+.button2 {
+  
+  background-color: white; 
+  color: black; 
+  border: 1.5px solid lightskyblue;
+  border-radius: 10%;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.button2:focus {
+  background-color: #008CBA;
+  color: white;
+}
+
+html {
+  font-size: 10px !important;
+}
+.vl{
+  border-left: 6px solid #008CBA;
+  height: 100%;
+  margin-top: 10%;
+}
+.unbehaved-element {
+  font-size: 2em !important;
+}
+@media(max-width: 1580px) {
+html {
+  font-size: 15px !important;
+}
+.unbehaved-element {
+  font-size: 1.9em !important; /* Fine tune unbehaved elements */
+}
+}
+@media(max-width: 980px) {
+html {
+  font-size: 12px !important;
+}
+}
+.tripDetails{
+  margin-top: 2%;
+}
+
+.arrow{
+  border-left: 1px solid rgb(6, 87, 87);
+}
+
+.time {
+  color:rgb(47, 5, 124);
+  font-weight: 400;
+}
