@@ -1,4 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
+
+This project is deployed on below URL:
+
+https://trip-sorter-by-byzyk.herokuapp.com
+
+After Downloading the project, follow the below steps to run it locally:
+
+1.Navigate to Project Directory
+2. Run npm install command
+3.Run npm start command
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
