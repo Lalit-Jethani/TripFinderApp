@@ -1,14 +1,14 @@
-// @flow
+
 
 import PriorityQueue from './priority-queue'
 
 class Data {
-    departure:string;
-    arrival:string;
-    reference:string;
-    cost:number;
-    discount:number;
-    duration:any
+  departure: string;
+  arrival: string;
+  reference: string;
+  cost: number;
+  discount: number;
+  duration: any
 
 }
 
@@ -24,17 +24,17 @@ class PathFinder {
     this.from = FROM;
     this.to = TO;
     this.type = TYPE;
-  
+
   }
 
 
-  
+
 
   // build correct Graph for Dijkstra algorithm
- 
+
 
   // Dijkstra algorithm to find shortest path
-  runDijkstra(Graph:any, from:any ,to:any) {
+  runDijkstra(Graph: any, from: any, to: any) {
     let nodes = new PriorityQueue();
     let dist = {};
     let prev = {};
@@ -56,7 +56,7 @@ class PathFinder {
       }
     }
 
-    while(!nodes.isEmpty()) {
+    while (!nodes.isEmpty()) {
       // u - current FROM node
       let u = nodes.ejectSmallest();
 
@@ -83,7 +83,7 @@ class PathFinder {
     return { prev, refTripMap }
   }
 
-   getBestTrip(dijkstraOutput:any, to:any) {
+  getBestTrip(dijkstraOutput: any, to: any) {
     let trips = [];
     let arrival = to;
     let departure = dijkstraOutput.prev[arrival];
@@ -94,19 +94,19 @@ class PathFinder {
       departure = dijkstraOutput.prev[departure];
     }
 
-  
+
     return trips.reverse();
   }
 
   public find() {
     const Graph = this.createVertices(this.deals, this.type);
- 
+
     const DijkstraOutput = this.runDijkstra(Graph, this.from, this.to);
-   
+
     return this.getBestTrip(DijkstraOutput, this.to);
   }
 
-   createVertices(data: Array<Data>, type: string) {
+  createVertices(data: Array<Data>, type: string) {
     let vertices: Object = {}; // put all our nodes and weights here
 
     if (!data) throw new Error('No trips data received');
@@ -133,7 +133,7 @@ class PathFinder {
 
       if (!vertices[from]) vertices[from] = [];
 
-      if(!vertices[from][to] || weight < vertices[from][to].weight) vertices[from][to] = { weight, ref }
+      if (!vertices[from][to] || weight < vertices[from][to].weight) vertices[from][to] = { weight, ref }
     });
 
     return vertices

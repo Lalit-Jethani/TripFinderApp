@@ -3,36 +3,24 @@ import * as React from 'react';
 import Trip from './Trip';
 import GetOrderedRoute from './../utils/GetOrderedRoute';
 import { getTotalUnits } from './../PathFinderAlgorithm/getTotalUnits';
-import {  currency } from './../utils/GetCurrency';
-
-
-
-
+import { currency } from './../utils/GetCurrency';
 
 
 class Triplist extends React.Component<any, any> {
-
 
   constructor(props: any) {
     super(props);
     this.state = { handleReset: "" };
     this.onBacktoSearch = this.onBacktoSearch.bind(this);
-    
+
   }
 
 
- 
-
-
-
   renderData(data: any) {
-      
-   
-  
     return (
       <div key={data.arrival}>
 
-        <Trip  {...data=data} />
+        <Trip  {...data = data} />
         <hr />
       </div>
     )
@@ -43,7 +31,7 @@ class Triplist extends React.Component<any, any> {
   }
 
   render() {
-   
+
     let localState: any;
     if (!this.props.Data.trips) {
       localState = localStorage.getItem("state");
@@ -52,7 +40,7 @@ class Triplist extends React.Component<any, any> {
     }
 
     if (!localState) {
-    
+
       var result = GetOrderedRoute(this.props.Data.from, this.props.Data.trips);
       var totalTime = getTotalUnits(this.props.Data.trips);
     }
@@ -68,16 +56,11 @@ class Triplist extends React.Component<any, any> {
     return (
       <div>
 
-
-
         <div >
           <a href="#" className="btn btn-primary btn-lg active btnBack" onClick={this.onBacktoSearch} role="button" aria-pressed="true">Search Again</a>
 
-
         </div>
-
         <div>
-
           <div className="Infomsg">
             <p className="text-info">
               The {
@@ -101,8 +84,6 @@ class Triplist extends React.Component<any, any> {
           <div className="row">
 
             <div className="col-sm-12  col-lg-2">
-
-
 
             </div>
             <div className="col-lg-10">

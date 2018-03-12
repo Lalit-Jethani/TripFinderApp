@@ -1,14 +1,9 @@
 
 import * as React from 'react';
 import { getTransportIcons } from './../utils/GetTransportIcon';
-import {  currency } from './../utils/GetCurrency';
-
-
-
+import { currency } from './../utils/GetCurrency';
 
 function Trip(props: any) {
-
-
     return (
         <div className="arrow container-fluid">
 
@@ -52,7 +47,7 @@ function Trip(props: any) {
                     </div>
                     <div>
                         {props.cost * (1 - props.discount / 100)} {currency}
-       </div>
+                    </div>
                 </div>
 
                 <div className="row">
