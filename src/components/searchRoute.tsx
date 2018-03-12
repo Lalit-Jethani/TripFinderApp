@@ -181,7 +181,7 @@ class SearchRoute extends React.Component<any, any> {
           labelKey="name"
         
           options={this.state.citiesList}
-          placeholder="from"
+          placeholder="Enter Source"
         />
          <div>
            {
@@ -204,7 +204,7 @@ class SearchRoute extends React.Component<any, any> {
           labelKey="name"
         
           options={this.state.citiesList}
-          placeholder="To"
+          placeholder="Enter Destination"
         />
         <div>
            {
