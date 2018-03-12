@@ -1,4 +1,4 @@
-
+import {PolyFillArrayForIE} from './../Polyfill/ArrayFInd';
 
 export class FindBestTrip
 
@@ -7,9 +7,11 @@ export class FindBestTrip
 
     constructor(deals:any){
          this.deals = deals;
+          PolyFillArrayForIE();
 
     }
 
+  
     ParseBestTrip(refs:Array<string>,deals:Array<any>){
         
         var filtered = new Array();
