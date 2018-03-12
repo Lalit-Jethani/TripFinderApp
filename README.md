@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project is deployed on below URL:
 
-https://trip-sorter-by-byzyk.herokuapp.com
+https://tripfinder-lalit.herokuapp.com
 
 After Downloading the project, follow the below steps to run it locally:
 
