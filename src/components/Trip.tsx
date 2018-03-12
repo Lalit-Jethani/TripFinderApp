@@ -1,6 +1,7 @@
 
 import * as React from 'react';
 import { getTransportIcons } from './../utils/GetTransportIcon';
+import {  currency } from './../utils/GetCurrency';
 
 
 
@@ -50,7 +51,7 @@ function Trip(props: any) {
                         <i className="large material-icons">attach_money</i>
                     </div>
                     <div>
-                        {props.cost * (1 - props.discount / 100)} EUR
+                        {props.cost * (1 - props.discount / 100)} {currency}
        </div>
                 </div>
 

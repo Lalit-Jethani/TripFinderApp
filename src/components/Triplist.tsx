@@ -16,13 +16,18 @@ class Triplist extends React.Component<any, any> {
     super(props);
     this.state = { handleReset: "" };
     this.onBacktoSearch = this.onBacktoSearch.bind(this);
+    
   }
 
+
+ 
 
 
 
   renderData(data: any) {
-
+      
+   
+  
     return (
       <div key={data.arrival}>
 
@@ -37,7 +42,7 @@ class Triplist extends React.Component<any, any> {
   }
 
   render() {
-
+   
     let localState: any;
     if (!this.props.Data.trips) {
       localState = localStorage.getItem("state");
@@ -46,6 +51,7 @@ class Triplist extends React.Component<any, any> {
     }
 
     if (!localState) {
+    
       var result = GetOrderedRoute(this.props.Data.from, this.props.Data.trips);
       var totalTime = getTotalUnits(this.props.Data.trips);
     }
@@ -56,7 +62,7 @@ class Triplist extends React.Component<any, any> {
 
     }
 
-
+    console.log(this.props.Data);
 
     return (
       <div>
