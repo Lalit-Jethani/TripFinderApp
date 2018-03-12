@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
-import * as data from './../api/response.json';
 import * as getRoute from './../actions/index';
 import { connect, Dispatch } from 'react-redux';
 import { bindActionCreators } from "redux";
@@ -8,6 +7,8 @@ import { getTotalUnits} from './../PathFinderAlgorithm/getTotalUnits'
 import {createTripRefMap} from './../PathFinderAlgorithm/createTripRefMap'
 import {createCitiesList} from './../PathFinderAlgorithm/createCitiesList'
 import { Typeahead } from 'react-bootstrap-typeahead'
+import {  currency } from './../utils/GetCurrency';
+import {  deals } from './../utils/GetDeals';
 
 
 export interface Props {
@@ -44,17 +45,12 @@ class SearchRoute extends React.Component<any, any> {
    
   }
 
-  public MockApiResponse() {
-    const response: any = data;
-    return {
-      response
-    }
-  }
+  
 
   
 
   componentWillMount() {
-    const { deals, currency } = this.MockApiResponse().response; // must be async Promise handler in real conditions
+   
     const tripRefMap = createTripRefMap(deals);
     const citiesList = createCitiesList(deals);
     this.setState({ deals, tripRefMap, currency, citiesList });
