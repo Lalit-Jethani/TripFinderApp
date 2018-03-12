@@ -3,6 +3,7 @@ import * as React from 'react';
 import Trip from './Trip';
 import GetOrderedRoute from './../utils/GetOrderedRoute';
 import { getTotalUnits } from './../PathFinderAlgorithm/getTotalUnits';
+import {  currency } from './../utils/GetCurrency';
 
 
 
@@ -85,7 +86,7 @@ class Triplist extends React.Component<any, any> {
               } trip to travel from<span className="text-uppercase"> {localState != undefined ? localState.from : this.props.Data.from} </span> to <span className="text-uppercase">{localState != undefined ? localState.to : this.props.Data.to}</span> will take <span className="text-uppercase">{totalTime.time.h}</span> hours and
 
          <span> {totalTime.time.m}</span> minutes .You will
-           need<span className="text-uppercase"> {totalTime.stops} </span> Stop(s).The Total cost of the journey would be <span> {totalTime.cost} </span> {localState != undefined ? localState.currency : this.props.Data.currency} after calculating discounts.
+           need<span className="text-uppercase"> {totalTime.stops} </span> Stop(s).The Total cost of the journey would be <span> {totalTime.cost} </span> {currency} after calculating discounts.
            </p>
 
           </div>
