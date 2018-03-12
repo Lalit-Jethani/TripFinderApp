@@ -4,7 +4,7 @@ import * as getRoute from './../actions/index';
 import { connect, Dispatch } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { createTripRefMap } from './../PathFinderAlgorithm/createTripRefMap'
-import { createCitiesList } from './../PathFinderAlgorithm/createCitiesList'
+import { createCitiesList } from './../utils/createCitiesList'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { currency } from './../utils/GetCurrency';
 import { deals } from './../utils/GetDeals';

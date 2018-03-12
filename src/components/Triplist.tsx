@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import * as React from 'react';
 import Trip from './Trip';
 import GetOrderedRoute from './../utils/GetOrderedRoute';
-import { getTotalUnits } from './../PathFinderAlgorithm/getTotalUnits';
+import { getTotalUnits } from './../utils/getTotalUnits';
 import { currency } from './../utils/GetCurrency';
 
 
