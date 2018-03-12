@@ -23,13 +23,10 @@ class Triplist extends React.Component<any, any> {
 
   renderData(data: any) {
 
-
-
-
     return (
-      <div>
+      <div key={data.arrival}>
 
-        <Trip {...data} />
+        <Trip  {...data=data} />
         <hr />
       </div>
     )

@@ -35,7 +35,7 @@ class SearchRoute extends React.Component<any, any> {
     handleSubmitFrom:true,
     handleSubmitType:true,
     handleSubmit:true,
-    typeOption:""
+    FromAndToSame:false
   
   };
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -70,8 +70,6 @@ class SearchRoute extends React.Component<any, any> {
 
   public handleOnChange(event: any): void {
     
-        
-   
      this.setState({ from: event[0] });
      
     if(this.state.from!="" || event[0]!=undefined)
@@ -80,9 +78,6 @@ class SearchRoute extends React.Component<any, any> {
       
       });
     }
-
-     
-
   }
 
   public handleOnChangeTo(event: any): void {
@@ -105,23 +100,21 @@ class SearchRoute extends React.Component<any, any> {
 
   public onFormSubmit(event: any): void {
     event.preventDefault();
-   
-  
-    
-  
-  
     if((this.state.from != "" && this.state.from != undefined) &&
-
     (this.state.to != "" && this.state.to != undefined &&
     this.state.type != "" && this.state.type != undefined 
   ) 
-  
-  
-  
   )
     {
+      if(this.state.from==this.state.to)
+      {
+        this.setState({FromAndToSame:true});
+      }
+      else{
     this.props.getRoute(this.state.deals,this.state.from, this.state.to,this.state.type,this.state.currency);
     this.props.history.push('/trip');
+    this.setState({FromAndToSame:false});
+      }
     }
     else{
     this.setState({handleSubmit:false});
@@ -172,7 +165,13 @@ class SearchRoute extends React.Component<any, any> {
        
         
         <fieldset>
-       
+        <div>
+           {
+             this.state.FromAndToSame?
+             <label className="Errorform">Source and Destination cannot be same!</label>:null
+           }
+
+         </div>
 
        <div className="form-group">
             <div className="col-md-6">

@@ -9,13 +9,13 @@ function Trip(props: any) {
 
 
     return (
-        <div className="arrow container">
+        <div className="arrow container-fluid">
 
             <div className=" travel-box">
 
                 <div className="row">
 
-                    <div className="col-xs-12 col-md-6 col-lg-2">
+                    <div className="col-6  col-md-6 col-lg-2">
                         <i className="large material-icons">adjust</i>
                     </div>
 
@@ -25,7 +25,7 @@ function Trip(props: any) {
                 </div>
 
                 <div className="row">
-                    <div className="col-xs-12 col-md-6 col-lg-2">
+                    <div className="col-6 col-md-6 col-lg-2">
 
 
 
@@ -37,7 +37,7 @@ function Trip(props: any) {
                 </div>
 
                 <div className="row">
-                    <div className="col-xs-12 col-md-6 col-lg-2">
+                    <div className="col-6 col-md-6 col-lg-2">
                         <i className="large material-icons">timer</i>
                     </div>
                     <div className="time">
@@ -46,16 +46,16 @@ function Trip(props: any) {
                 </div>
 
                 <div className="row">
-                    <div className="col-xs-12 col-md-6 col-lg-2">
+                    <div className="col-6 col-md-6 col-lg-2">
                         <i className="large material-icons">attach_money</i>
                     </div>
                     <div>
-                        {props.cost * (1 - props.discount / 100)} EUROS
+                        {props.cost * (1 - props.discount / 100)} EUR
        </div>
                 </div>
 
                 <div className="row">
-                    <div className="col-xs-12 col-md-6 col-lg-2">
+                    <div className="col-6 col-md-6 col-lg-2">
                         <i className="large material-icons">adjust</i>
                     </div>
                     <div className="place">
