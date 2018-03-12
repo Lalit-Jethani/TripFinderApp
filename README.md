@@ -4,9 +4,15 @@ This project is deployed on below URL:
 
 https://tripfinder-lalit.herokuapp.com
 
+This is a completely Responsive App built using Bootstrap CSS.
+This App is built completely in Typescript.
+Framework used is React JS + Redux JS for state management.
+
 After Downloading the project, follow the below steps to run it locally:
 
-1.Navigate to Project Directory
+Make sure NODE JS and NPM are installed on your machine.
+
+1.Navigate to Project Directory from Command prompt
 2. Run npm install command
 3.Run npm start command
 
