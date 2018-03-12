@@ -3,7 +3,6 @@ import { ButtonGroup, Button } from 'react-bootstrap';
 import * as getRoute from './../actions/index';
 import { connect, Dispatch } from 'react-redux';
 import { bindActionCreators } from "redux";
-import { getTotalUnits } from './../PathFinderAlgorithm/getTotalUnits'
 import { createTripRefMap } from './../PathFinderAlgorithm/createTripRefMap'
 import { createCitiesList } from './../PathFinderAlgorithm/createCitiesList'
 import { Typeahead } from 'react-bootstrap-typeahead'
@@ -37,13 +36,7 @@ class SearchRoute extends React.Component<any, any> {
 
   }
 
-  parseBestTrip(refs: Array<string>) {
-    let trips: Array<any> = [];
-    refs.forEach(ref => trips.push(this.state.tripRefMap[ref]));
-    let total: Object = getTotalUnits(trips);
-    this.setState({ trips, total, loading: false });
-  }
-
+  
   public handleOnChange(event: any): void {
     this.setState({ from: event[0] });
     if (this.state.from != "" || event[0] != undefined) {
