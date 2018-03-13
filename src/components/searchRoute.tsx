@@ -148,7 +148,7 @@ class SearchRoute extends React.Component<any, any> {
                           <div>
                             {
                               this.state.handleSubmitFrom || this.state.handleSubmit ?
-                                null : <label className="Errorform">From Location is Required!</label>
+                                null : <label className="Errorform">Please select a valid From location!</label>
                             }
 
                           </div>
@@ -171,7 +171,7 @@ class SearchRoute extends React.Component<any, any> {
                           <div>
                             {
                               this.state.handleSubmitTo || this.state.handleSubmit ?
-                                null : <label className="Errorform">To Location is Required!</label>
+                                null : <label className="Errorform">Please select a valid To location!</label>
                             }
 
                           </div>
