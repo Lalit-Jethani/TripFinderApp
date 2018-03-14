@@ -3,7 +3,6 @@ import { ButtonGroup, Button } from 'react-bootstrap';
 import * as getRoute from './../actions/index';
 import { connect, Dispatch } from 'react-redux';
 import { bindActionCreators } from "redux";
-import { createTripRefMap } from './../PathFinderAlgorithm/createTripRefMap'
 import { createCitiesList } from './../utils/createCitiesList'
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { currency } from './../utils/GetCurrency';
@@ -15,7 +14,7 @@ class SearchRoute extends React.Component<any, any> {
     super(props);
 
     this.state = {
-      from: "", to: "", deals: "", type: "",
+      from: "", to: "", type: "",
       handleSubmitTo: true,
       handleSubmitFrom: true,
       handleSubmitType: true,
@@ -30,13 +29,13 @@ class SearchRoute extends React.Component<any, any> {
 
   componentWillMount() {
 
-    const tripRefMap = createTripRefMap(deals);
+   
     const citiesList = createCitiesList(deals);
-    this.setState({ deals, tripRefMap, currency, citiesList });
+    this.setState({  currency, citiesList });
 
   }
 
-  
+
   public handleOnChange(event: any): void {
     this.setState({ from: event[0] });
     if (this.state.from != "" || event[0] != undefined) {
@@ -73,7 +72,7 @@ class SearchRoute extends React.Component<any, any> {
         this.setState({ FromAndToSame: true });
       }
       else {
-        this.props.getRoute(this.state.deals, this.state.from, this.state.to, this.state.type, this.state.currency);
+        this.props.getRoute(deals, this.state.from, this.state.to, this.state.type, this.state.currency);
         this.props.history.push('/trip');
         this.setState({ FromAndToSame: false });
       }
