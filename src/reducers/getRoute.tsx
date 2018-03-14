@@ -12,14 +12,15 @@ export default function GetRoute(state: StoreState, action: getRoute): StoreStat
     switch (action.type) {
 
         case TRIP_DETAILS:
+            const newState = {...state};
 
-            state.trips = action.payload.trips;
-            state.from = action.payload.from;
-            state.to = action.payload.to;
-            state.currency = action.payload.currency;
-            state.type = action.payload.type;
-            localStorage.setItem("state", JSON.stringify(state));
-            return state;
+            newState.trips = action.payload.trips;
+            newState.from = action.payload.from;
+            newState.to = action.payload.to;
+            newState.currency = action.payload.currency;
+            newState.type = action.payload.type;
+            localStorage.setItem("state", JSON.stringify(newState));
+            return newState;
 
         default:
 
