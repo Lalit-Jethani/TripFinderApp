@@ -10,7 +10,7 @@ class Triplist extends React.Component<any, any> {
 
   constructor(props: any) {
     super(props);
-    this.state = { handleReset: "" };
+ 
     this.onBacktoSearch = this.onBacktoSearch.bind(this);
 
   }
