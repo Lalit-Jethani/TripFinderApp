@@ -7,15 +7,17 @@ export default interface StoreState {
     from:string;
     to:string;
     type:string;
+    deals:Array<any>
 }
 
 
-export default class bestTrips implements StoreState {
+export default class Trips implements StoreState {
    
     trips:Array<any>;
     currency:number;
     from:string;
     to:string;
     type:string;
+    deals:Array<any>
 
 }

@@ -1,6 +1,6 @@
 // @flow
 
-export const createCitiesList = (deals: Array<any>) => {
+export const createCitiesList = (deals: Array<any> = []) => {
     let addedList:any = [];
     let list:any = [];
   
@@ -11,10 +11,13 @@ export const createCitiesList = (deals: Array<any>) => {
       }
     };
   
+    if(deals)
+    {
     deals.forEach(item => {
       addCity(item.departure);
       addCity(item.arrival);
     });
+  }
   
     list.sort();
   

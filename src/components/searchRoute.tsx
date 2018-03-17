@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
-import * as getRoute from './../actions/index';
+import * as ActionCreators from './../actions/';
+
 import { connect, Dispatch } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { createCitiesList } from './../utils/createCitiesList'
 import { Typeahead } from 'react-bootstrap-typeahead'
-import { currency } from './../utils/GetCurrency';
+
 import { deals } from './../utils/GetDeals';
 
 
@@ -27,13 +28,15 @@ class SearchRoute extends React.Component<any, any> {
     this.handleOnChangeTo = this.handleOnChangeTo.bind(this);
   }
 
-  componentWillMount() {
-
+  componentDidMount(){
+    
    
-    const citiesList = createCitiesList(deals);
-    this.setState({  currency, citiesList });
+    this.props.getDeals();
+   
 
   }
+
+ 
 
 
   public handleOnChange(event: any): void {
@@ -72,7 +75,7 @@ class SearchRoute extends React.Component<any, any> {
         this.setState({ FromAndToSame: true });
       }
       else {
-        this.props.getRoute(deals, this.state.from, this.state.to, this.state.type, this.state.currency);
+        this.props.getRoute(deals, this.state.from, this.state.to, this.state.type, this.props.currency);
         this.props.history.push('/trip');
         this.setState({ FromAndToSame: false });
       }
@@ -141,7 +144,7 @@ class SearchRoute extends React.Component<any, any> {
                           <Typeahead onChange={this.handleOnChange}
                             labelKey="name"
 
-                            options={this.state.citiesList}
+                            options={this.props.citiesList}
                             placeholder="Enter Source"
                           />
                           <div>
@@ -164,7 +167,7 @@ class SearchRoute extends React.Component<any, any> {
                             onChange={this.handleOnChangeTo}
                             labelKey="name"
 
-                            options={this.state.citiesList}
+                            options={this.props.citiesList}
                             placeholder="Enter Destination"
                           />
                           <div>
@@ -217,15 +220,19 @@ class SearchRoute extends React.Component<any, any> {
   }
 }
 
-function mapDispatchToProps(dispatch: Dispatch<getRoute.getRoute>) {
+function mapDispatchToProps(dispatch: Dispatch<any>) {
 
-  return bindActionCreators({ getRoute: getRoute.getRoute }, dispatch);
-
-
+  return bindActionCreators({ getRoute: ActionCreators.getRoute,getDeals:ActionCreators.getDeals }, dispatch);
 }
 
 function mapStateToProps(state: any) {
-  return { data: state.getRoute };
+  console.log(state.getDeals.deals)
+  return {  
+
+    deals:state.getDeals.deals,
+    citiesList: createCitiesList(state.getDeals.deals),
+    currency: state.getDeals.currency
+  };
 }
 
 

@@ -1,7 +1,7 @@
 import { getRoute } from './../actions';
 import { TRIP_DETAILS } from './../Constants/Constants';
 import { StoreState } from './../Store/IStore';
-import bestTrips from './../Models/BestTrip'
+import bestTrips from './../Models/Trips'
 
 
 

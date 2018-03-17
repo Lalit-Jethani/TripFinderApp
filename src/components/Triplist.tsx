@@ -98,7 +98,7 @@ class Triplist extends React.Component<any, any> {
 
 }
 function mapStateToProps(state: any) {
-  return { Data: state.getRoute };
+  return { Data: state.getRoute};
 }
 
 export default connect(mapStateToProps)(Triplist);
