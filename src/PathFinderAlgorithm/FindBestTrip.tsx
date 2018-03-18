@@ -1,34 +1,39 @@
-
+import { PolyFillArrayForIE } from './../Polyfill/ArrayFInd';
 
 export class FindBestTrip {
     deals: any;
 
     constructor(deals: any) {
         this.deals = deals;
-       
+        PolyFillArrayForIE();
 
     }
 
 
-    ParseBestTrip(refs: Array<string>, deals: Array<any>) {
+    ParseBestTrip(from:string,refs: Array<string>, deals: Array<any>) {
 
         var filtered = new Array();
+        var finalTrips = new Array();
+         var preArrival:string = from;
 
-        for(let i=0;i<refs.length;i++ )
-        {
+        for (let trip of deals) {
+           
+            if (refs.find((val) => val == trip.reference))
+              filtered.push(trip);
 
-        for(let j=0;j<deals.length;j++){
-            if(deals[j].reference==refs[i])
-            {
-                filtered.push(deals[j]);
-            }
-
+             
         }
-    }
+        for(var i=0;i<filtered.length;i++)
+        {
+            if(filtered[i].departure == preArrival)
+            {
+              finalTrips.push(filtered[i]);
+              preArrival = filtered[i].arrival;
+            }
+           
+        }
 
-        
-
-        return filtered;
+        return finalTrips;
 
     }
 

@@ -35,7 +35,7 @@ export function getRoute(deals:any,from:any,to:any,type:any,currency:any):getRou
        
     var bestTrip = new FindBestTrip(tripGraph);
 
-       bestStrp.trips = bestTrip.ParseBestTrip(tripGraph,deals);
+       bestStrp.trips = bestTrip.ParseBestTrip(from,tripGraph,deals);
        bestStrp.currency = currency;
        bestStrp.from = from;
        bestStrp.to =to;

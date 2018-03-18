@@ -89,6 +89,12 @@ class PathFinder {
     let departure = dijkstraOutput.prev[arrival];
 
     while (departure) {
+      //trips.push(dijkstraOutput.refTripMap.filter((item:any)=>{item}))
+
+
+  
+  
+     
       trips.push(dijkstraOutput.refTripMap[`${departure}-${arrival}`]);
       arrival = departure;
       departure = dijkstraOutput.prev[departure];
