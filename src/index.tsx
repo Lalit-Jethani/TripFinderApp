@@ -6,11 +6,10 @@ import './index.css';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
 import { createStore, applyMiddleware } from "redux";
+import * as ReduxPromise from "redux-promise";
 
-import thunk from 'redux-thunk';
 
-
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 
 

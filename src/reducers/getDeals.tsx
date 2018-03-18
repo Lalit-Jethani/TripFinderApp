@@ -1,5 +1,5 @@
 import { getDeals } from './../actions';
-import {  RECIEVE_DEALS } from './../Constants/Constants';
+import {  REQUEST_DEALS } from './../Constants/Constants';
 import { StoreState } from './../Store/IStore';
 import Trips from './../Models/Trips'
 
@@ -11,9 +11,9 @@ export default function GetDeals(state: StoreState, action: getDeals): StoreStat
 
     switch (action.type) {
 
-        case RECIEVE_DEALS:
+        case REQUEST_DEALS:
             const newState = {...state};
-
+           console.log(action.payload);
             newState.deals = action.payload.deals;
             newState.currency = action.payload.currency;
             

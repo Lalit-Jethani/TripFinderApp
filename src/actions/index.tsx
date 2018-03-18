@@ -1,9 +1,11 @@
  
 import {FindBestTrip} from './../PathFinderAlgorithm/FindBestTrip'
 import IRoutingStrategyBase from './../Interfaces/RouteFInderStrategy/IRouteStrategy';
-import {TRIP_DETAILS, REQUEST_DEALS, RECIEVE_DEALS} from './../Constants/Constants';
+import {TRIP_DETAILS, REQUEST_DEALS} from './../Constants/Constants';
 import bestTrips from   './../Models/Trips';
-import {fetchDeals} from './../api/apiService';
+
+import {deals} from './../utils/GetDeals';
+import {currency} from './../utils/GetCurrency'
 
 
 
@@ -50,29 +52,24 @@ export function getRoute(deals:any,from:any,to:any,type:any,currency:any):getRou
 
 export function getDeals() {
 
-    return function action(dispatch:any) {
-        dispatch({ type: REQUEST_DEALS })
-    
-        const request = fetchDeals();
+    class Deals {
+        deals:any;
+        currency:number;
+    }
         
-        return request.then(
-          response => dispatch({
-                   
-            type:RECIEVE_DEALS,
-            payload: response.data,
-            success : true
 
-        }, console.log(response)),
-          err => dispatch( err= {
-                   
-            type:RECIEVE_DEALS,
-            payload:err,
-            success : false
 
-        })
-        );
-      }
-    
+       
+const dealsTrip = new Deals();
+dealsTrip.currency = currency;
+dealsTrip.deals = deals;
+
+console.log(dealsTrip);
+
+        return { type:REQUEST_DEALS,
+            payload:dealsTrip,
+            success:true
+};
     
    
    

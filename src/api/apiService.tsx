@@ -1,17 +1,23 @@
-import axios from 'axios';
-import {REACT_APP_API_URL} from './../Constants/Constants';
+
+import {deals} from './../utils/GetDeals';
+import {currency} from './../utils/GetCurrency'
 
 
-export let fetchDeals = ()=>{
+class Deals {
+    deals:any;
+    currency:number;
+}
 
-
+function fetchDeals() {
    
-   return axios.get(REACT_APP_API_URL+'/response.json')
-  .then(function (response) {
-    return response;
-  })
-  .catch(function (error) {
-   return error
-  });
+    var fecthdeals = new Deals();
 
-};
+    fecthdeals.currency = currency;
+    fecthdeals.deals = deals;
+console.log(fecthdeals);
+
+   return fetchDeals;
+
+}
+
+export const fetchDeal = fetchDeals();
