@@ -64,7 +64,7 @@ const dealsTrip = new Deals();
 dealsTrip.currency = currency;
 dealsTrip.deals = deals;
 
-console.log(dealsTrip);
+
 
         return { type:REQUEST_DEALS,
             payload:dealsTrip,

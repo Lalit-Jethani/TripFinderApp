@@ -13,14 +13,13 @@ export default function GetDeals(state: StoreState, action: getDeals): StoreStat
 
         case REQUEST_DEALS:
             const newState = {...state};
-           console.log(action.payload);
+         
             newState.deals = action.payload.deals;
             newState.currency = action.payload.currency;
             
             
             localStorage.setItem("state", JSON.stringify(newState));
-            console.log("newState.deals");
-            console.log(newState.deals);
+          
             return newState;
 
         default:

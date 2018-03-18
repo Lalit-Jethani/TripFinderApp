@@ -226,7 +226,7 @@ function mapDispatchToProps(dispatch: Dispatch<any>) {
 }
 
 function mapStateToProps(state: any) {
-  console.log(state.getDeals.deals)
+ 
   return {  
 
     deals:state.getDeals.deals,
