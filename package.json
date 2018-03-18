@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2",
     "@types/axios": "^0.14.0",
     "@types/react-bootstrap": "^0.32.6",
     "@types/react-bootstrap-typeahead": "^2.3.0",
