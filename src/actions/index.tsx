@@ -3,9 +3,7 @@ import {FindBestTrip} from './../PathFinderAlgorithm/FindBestTrip'
 import IRoutingStrategyBase from './../Interfaces/RouteFInderStrategy/IRouteStrategy';
 import {TRIP_DETAILS, REQUEST_DEALS} from './../Constants/Constants';
 import bestTrips from   './../Models/Trips';
-
-import {deals} from './../utils/GetDeals';
-import {currency} from './../utils/GetCurrency'
+import {fetchDeals} from './../api/apiService';
 
 
 
@@ -52,22 +50,14 @@ export function getRoute(deals:any,from:any,to:any,type:any,currency:any):getRou
 
 export function getDeals() {
 
-    class Deals {
-        deals:any;
-        currency:number;
-    }
+    
         
+let request = fetchDeals();
 
-
-       
-const dealsTrip = new Deals();
-dealsTrip.currency = currency;
-dealsTrip.deals = deals;
-
-
+        console.log(request);
 
         return { type:REQUEST_DEALS,
-            payload:dealsTrip,
+            payload:request,
             success:true
 };
     

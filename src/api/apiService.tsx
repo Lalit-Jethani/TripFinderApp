@@ -8,16 +8,15 @@ class Deals {
     currency:number;
 }
 
-function fetchDeals() {
+export const fetchDeals =function() {
    
-    var fecthdeals = new Deals();
+    var fetchdeals = new Deals();
 
-    fecthdeals.currency = currency;
-    fecthdeals.deals = deals;
-console.log(fecthdeals);
+    fetchdeals.currency = currency;
+    fetchdeals.deals = deals;
+console.log(fetchdeals);
 
-   return fetchDeals;
+   return fetchdeals;
 
 }
 
-export const fetchDeal = fetchDeals();
